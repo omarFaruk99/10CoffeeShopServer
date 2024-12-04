@@ -41,7 +41,8 @@ async function run() {
     app.get("/coffees", async (req, res) => {
       const cursor = coffeeCollection.find();
       const result = await cursor.toArray();
-      res.send(result);
+      
+      res.send(result); 
     });
 
     // Define a post route to handle adding new coffee
